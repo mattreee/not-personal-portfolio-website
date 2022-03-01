@@ -1,0 +1,89 @@
+// Typography
+$ff-ibm-plex-mono: "IBM Plex Mono", monospace, sans-serif;
+$fw-ibm-plex-mono-regular: 400;
+$fw-ibm-plex-mono-bold: 700;
+
+$ff-ibm-plex-mono-sans: "IBM Plex Sans", monospace, sans-serif;
+$fw-ibm-plex-sans-regular: 400;
+
+// Headers - Mixins
+@mixin desktop-heading-1 {
+	font-family: $ff-ibm-plex-mono;
+	font-size: 12rem;
+	line-height: 12rem;
+	font-weight: $fw-ibm-plex-mono-bold;
+	// color:
+}
+
+@mixin desktop-heading-2 {
+	font-family: $ff-ibm-plex-mono;
+	font-size: 3rem;
+	line-height: 4rem;
+	font-weight: $fw-ibm-plex-mono-bold;
+	// color:
+}
+
+@mixin desktop-heading-3 {
+	font-family: $ff-ibm-plex-mono;
+	font-size: 1.25rem;
+	line-height: 2rem;
+	font-weight: $fw-ibm-plex-mono-bold;
+	// color:
+}
+
+// Body Text - Mixins
+@mixin desktop-body {
+	font-family: $ff-ibm-plex-mono-sans;
+	font-size: 1.125rem;
+	line-height: 2rem;
+	font-weight: $fw-ibm-plex-sans-regular;
+	// color:
+}
+
+@mixin desktop-body-small {
+	font-family: $ff-ibm-plex-mono-sans;
+	font-size: 1rem;
+	line-height: 2rem;
+	font-weight: $fw-ibm-plex-sans-regular;
+	// color:
+}
+
+@mixin link {
+	font-family: $ff-ibm-plex-mono-sans;
+	font-size: 1.125rem;
+	line-height: 2rem;
+	font-weight: $fw-ibm-plex-sans-regular;
+	// color:
+}
+
+// Colors
+$color-secondary: #00faa0;
+$color-secondary-10: #00faa01a;
+$color-tertiary: #0587b9;
+$color-primary: linear-gradient(
+	to right,
+	$color-secondary,
+	$color-tertiary,
+	#001441,
+	rgb(0, 20, 65)
+);
+
+// Colors Background
+$color-bg: #00050f;
+$color-bg-90: #00050fe6;
+
+// Neutral Colors
+$color-neutral-primary: #e6e6fa;
+$color-neutral-primary-60: #87879b;
+$color-neutral-primary-30: #464956;
+$color-neutral-primary-20: #2e323e;
+$color-neutral-primary-15: #232733;
+
+// Feedback Colors
+$color-error: #dc0000;
+
+body {
+	@include desktop-heading-1();
+	background-color: #222;
+	color: white;
+}

@@ -1,5 +1,7 @@
+import "./css/main.css";
+
 function App() {
-	return <div>teste</div>;
+	return <div>test</div>;
 }
 
 export default App;
