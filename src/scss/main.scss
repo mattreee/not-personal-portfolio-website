@@ -12,7 +12,7 @@ $fw-ibm-plex-sans-regular: 400;
 	font-size: 12rem;
 	line-height: 12rem;
 	font-weight: $fw-ibm-plex-mono-bold;
-	// color:
+	color: $color-secondary;
 }
 
 @mixin desktop-heading-2 {
@@ -20,7 +20,7 @@ $fw-ibm-plex-sans-regular: 400;
 	font-size: 3rem;
 	line-height: 4rem;
 	font-weight: $fw-ibm-plex-mono-bold;
-	// color:
+	color: $color-neutral-primary;
 }
 
 @mixin desktop-heading-3 {
@@ -28,7 +28,7 @@ $fw-ibm-plex-sans-regular: 400;
 	font-size: 1.25rem;
 	line-height: 2rem;
 	font-weight: $fw-ibm-plex-mono-bold;
-	// color:
+	color: $color-neutral-primary;
 }
 
 // Body Text - Mixins
@@ -37,7 +37,7 @@ $fw-ibm-plex-sans-regular: 400;
 	font-size: 1.125rem;
 	line-height: 2rem;
 	font-weight: $fw-ibm-plex-sans-regular;
-	// color:
+	color: $color-neutral-primary;
 }
 
 @mixin desktop-body-small {
@@ -45,7 +45,7 @@ $fw-ibm-plex-sans-regular: 400;
 	font-size: 1rem;
 	line-height: 2rem;
 	font-weight: $fw-ibm-plex-sans-regular;
-	// color:
+	color: $color-neutral-primary;
 }
 
 @mixin link {
@@ -53,20 +53,23 @@ $fw-ibm-plex-sans-regular: 400;
 	font-size: 1.125rem;
 	line-height: 2rem;
 	font-weight: $fw-ibm-plex-sans-regular;
-	// color:
+	color: $color-secondary;
 }
 
 // Colors
 $color-secondary: #00faa0;
 $color-secondary-10: #00faa01a;
 $color-tertiary: #0587b9;
-$color-primary: linear-gradient(
-	to right,
-	$color-secondary,
-	$color-tertiary,
-	#001441,
-	rgb(0, 20, 65)
-);
+
+@mixin color-primary($direction) {
+	background-image: linear-gradient(
+		#{$direction},
+		$color-secondary,
+		$color-tertiary,
+		#001441,
+		rgb(0, 20, 65)
+	);
+}
 
 // Colors Background
 $color-bg: #00050f;
@@ -82,8 +85,104 @@ $color-neutral-primary-15: #232733;
 // Feedback Colors
 $color-error: #dc0000;
 
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	@include desktop-heading-1();
-	background-color: #222;
+	background-color: $color-bg;
 	color: white;
+	overflow-x: hidden;
+}
+
+.header {
+	@include desktop-heading-3();
+
+	font-family: $ff-ibm-plex-mono-sans;
+
+	background-color: $color-bg;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 7rem;
+
+	&__lang {
+		display: flex;
+		gap: 1rem;
+	}
+
+	&__button {
+		background: none;
+		font-family: $ff-ibm-plex-mono;
+		font-size: 1.25rem;
+		color: white;
+		border: none;
+
+		&:focus-within {
+			font-weight: bold;
+		}
+	}
+}
+
+.navbar {
+	list-style-type: none;
+	display: flex;
+	gap: 1rem;
+	font-size: 1.1rem;
+
+	&__link {
+		text-decoration: none;
+		color: white;
+	}
+
+	&__home {
+		color: $color-secondary;
+	}
+
+	&__contact {
+		color: $color-secondary;
+		font-size: 1.3rem;
+		border: 2px solid $color-secondary;
+		border-radius: 10px;
+		padding: 0.4em 1em;
+	}
+}
+
+.intro {
+	padding: 9rem 0;
+
+	&__hi {
+		@include desktop-heading-2();
+
+		padding: 0 7rem;
+	}
+
+	&__name {
+		@include desktop-heading-1();
+		@include color-primary("to right");
+
+		white-space: nowrap;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.bold-text {
+		font-weight: bold;
+	}
+
+	&__desc {
+		@include desktop-body();
+
+		margin-top: 3.5rem;
+		padding: 0 7rem;
+		width: 49%;
+	}
+}
+
+.about {
+	background-color: lightslategrey;
+	padding: 1rem 0;
 }
