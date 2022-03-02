@@ -97,6 +97,10 @@ body {
 	overflow-x: hidden;
 }
 
+.bold-text {
+	font-weight: bold;
+}
+
 .header {
 	@include desktop-heading-3();
 
@@ -130,7 +134,7 @@ body {
 .navbar {
 	list-style-type: none;
 	display: flex;
-	gap: 1rem;
+	gap: 1.5rem;
 	font-size: 1.1rem;
 
 	&__link {
@@ -144,10 +148,10 @@ body {
 
 	&__contact {
 		color: $color-secondary;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		border: 2px solid $color-secondary;
-		border-radius: 10px;
-		padding: 0.4em 1em;
+		border-radius: 8px;
+		padding: 0.4em 1.5rem;
 	}
 }
 
@@ -169,10 +173,6 @@ body {
 		background-clip: text;
 	}
 
-	.bold-text {
-		font-weight: bold;
-	}
-
 	&__desc {
 		@include desktop-body();
 
@@ -183,6 +183,101 @@ body {
 }
 
 .about {
-	background-color: lightslategrey;
-	padding: 1rem 0;
+	margin: 0 17rem;
+	padding: 2em 0;
+	width: 50%;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"image desc"
+		"skills skills";
+	column-gap: 2rem;
+	row-gap: 1.5rem;
+
+	&__desc {
+		grid-area: desc;
+	}
+
+	&__image-container {
+		grid-area: image;
+		@include color-primary("to bottom");
+		margin: 1.5rem 0.8rem;
+		border-radius: 8px;
+	}
+
+	&__image {
+		border-radius: 8px;
+		transform: translate(1.1em, -0.8em);
+	}
+
+	&__title {
+		@include desktop-heading-2();
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: "";
+			@include color-primary("to left");
+			width: 50%;
+			height: 25%;
+			right: 0;
+			top: 40%;
+		}
+	}
+
+	&__desc-container {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+
+	&__desc-item {
+		@include desktop-body();
+	}
+
+	&__skills-gradient {
+		grid-area: skills;
+
+		border-radius: 8px;
+		@include color-primary("to bottom");
+	}
+
+	&__skills-container {
+		display: flex;
+		justify-content: center;
+		width: fit-content;
+		gap: 2rem;
+		padding: 2rem 1rem;
+
+		margin: 0 auto;
+		margin-top: 0.05em;
+		border-radius: 8px;
+		background-color: $color-bg;
+		width: 99.5%;
+		height: 99%;
+	}
+
+	.skills-title {
+		@include desktop-heading-3();
+	}
+
+	&__skills-item {
+		list-style: none;
+
+		@include desktop-body();
+	}
+
+	&__skills-li {
+		margin-left: 1.5rem;
+
+		&::before {
+			content: "\2022";
+			color: $color-tertiary;
+			font-weight: bold;
+			display: inline-block;
+			width: 1em;
+			margin-left: -1em;
+		}
+	}
 }

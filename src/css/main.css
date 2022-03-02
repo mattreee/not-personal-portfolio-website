@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+.bold-text {
+  font-weight: bold;
+}
+
 .header {
   font-family: "IBM Plex Mono", monospace, sans-serif;
   font-size: 1.25rem;
@@ -56,7 +60,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   font-size: 1.1rem;
 }
 
@@ -71,10 +75,10 @@ body {
 
 .navbar__contact {
   color: #00faa0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border: 2px solid #00faa0;
-  border-radius: 10px;
-  padding: 0.4em 1em;
+  border-radius: 8px;
+  padding: 0.4em 1.5rem;
 }
 
 .intro {
@@ -103,10 +107,6 @@ body {
   background-clip: text;
 }
 
-.intro .bold-text {
-  font-weight: bold;
-}
-
 .intro__desc {
   font-family: "IBM Plex Sans", monospace, sans-serif;
   font-size: 1.125rem;
@@ -119,7 +119,137 @@ body {
 }
 
 .about {
-  background-color: lightslategrey;
-  padding: 1rem 0;
+  margin: 0 17rem;
+  padding: 2em 0;
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "image desc" "skills skills";
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  row-gap: 1.5rem;
+}
+
+.about__desc {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: desc;
+}
+
+.about__image-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
+  background-image: linear-gradient(to bottom, #00faa0, #0587b9, #001441, #001441);
+  margin: 1.5rem 0.8rem;
+  border-radius: 8px;
+}
+
+.about__image {
+  border-radius: 8px;
+  -webkit-transform: translate(1.1em, -0.8em);
+          transform: translate(1.1em, -0.8em);
+}
+
+.about__title {
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 700;
+  color: #e6e6fa;
+  position: relative;
+}
+
+.about__title::before {
+  position: absolute;
+  content: "";
+  background-image: -webkit-gradient(linear, right top, left top, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
+  background-image: linear-gradient(to left, #00faa0, #0587b9, #001441, #001441);
+  width: 50%;
+  height: 25%;
+  right: 0;
+  top: 40%;
+}
+
+.about__desc-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.6rem;
+}
+
+.about__desc-item {
+  font-family: "IBM Plex Sans", monospace, sans-serif;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: #e6e6fa;
+}
+
+.about__skills-gradient {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: skills;
+  border-radius: 8px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
+  background-image: linear-gradient(to bottom, #00faa0, #0587b9, #001441, #001441);
+}
+
+.about__skills-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  margin-top: 0.05em;
+  border-radius: 8px;
+  background-color: #00050f;
+  width: 99.5%;
+  height: 99%;
+}
+
+.about .skills-title {
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #e6e6fa;
+}
+
+.about__skills-item {
+  list-style: none;
+  font-family: "IBM Plex Sans", monospace, sans-serif;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: #e6e6fa;
+}
+
+.about__skills-li {
+  margin-left: 1.5rem;
+}
+
+.about__skills-li::before {
+  content: "\2022";
+  color: #0587b9;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 /*# sourceMappingURL=main.css.map */
