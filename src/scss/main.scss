@@ -60,6 +60,8 @@ $fw-ibm-plex-sans-regular: 400;
 $color-secondary: #00faa0;
 $color-secondary-10: #00faa01a;
 $color-tertiary: #0587b9;
+$black: black;
+$white: white;
 
 @mixin color-primary($direction) {
 	background-image: linear-gradient(
@@ -284,7 +286,7 @@ body {
 
 .services {
 	margin: 0 17rem;
-	height: 100vh;
+	height: 90vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -332,5 +334,87 @@ body {
 		background-color: $color-neutral-primary-15;
 		border-radius: 8px;
 		padding: 1rem 0;
+	}
+}
+
+.projects {
+	margin-top: 6rem;
+
+	&__title {
+		@include desktop-heading-2();
+		margin: 0 17rem;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: "";
+			@include color-primary("to left");
+			width: 70%;
+			height: 30%;
+			right: 0;
+			top: 40%;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(450px, 1fr));
+		grid-template-rows: repeat(2, minmax(450px, 1fr));
+
+		padding: 3rem 0;
+	}
+
+	&__card {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-blend-mode: multiply;
+		background-color: darken($color-secondary, 35);
+		padding: 2rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&:hover {
+			background-blend-mode: unset;
+		}
+	}
+
+	$backgrounds: (
+		beach: url("../images/beach.jpg"),
+		camera: url("../images/camera.jpg"),
+		coffee: url("../images/coffee.jpg"),
+		jump: url("../images/jump.jpg"),
+		path: url("../images/path.jpg"),
+		starry: url("../images/starry.jpg"),
+	);
+
+	@each $name, $background in $backgrounds {
+		.#{$name} {
+			background-image: #{$background},
+				linear-gradient(to top, mix($black, $white, 80), $white);
+		}
+	}
+
+	&__type {
+		justify-self: flex-start;
+		align-self: flex-end;
+
+		font-family: $ff-ibm-plex-mono-sans;
+		font-weight: bold;
+
+		background-color: $color-secondary;
+		width: fit-content;
+		color: $color-neutral-primary-15;
+		border-radius: 13px;
+		padding: 0.1em 0.5em;
+	}
+
+	&__name {
+		@include desktop-heading-3();
+	}
+
+	&__desc {
+		@include desktop-body-small();
 	}
 }

@@ -255,7 +255,7 @@ body {
 
 .services {
   margin: 0 17rem;
-  height: 100vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,5 +322,123 @@ body {
   background-color: #232733;
   border-radius: 8px;
   padding: 1rem 0;
+}
+
+.projects {
+  margin-top: 6rem;
+}
+
+.projects__title {
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 700;
+  color: #e6e6fa;
+  margin: 0 17rem;
+  position: relative;
+}
+
+.projects__title::before {
+  position: absolute;
+  content: "";
+  background-image: -webkit-gradient(linear, right top, left top, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
+  background-image: linear-gradient(to left, #00faa0, #0587b9, #001441, #001441);
+  width: 70%;
+  height: 30%;
+  right: 0;
+  top: 40%;
+}
+
+.projects__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(450px, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(450px, 1fr));
+  -ms-grid-rows: (minmax(450px, 1fr))[2];
+      grid-template-rows: repeat(2, minmax(450px, 1fr));
+  padding: 3rem 0;
+}
+
+.projects__card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #00482e;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projects__card:hover {
+  background-blend-mode: unset;
+}
+
+.projects .beach {
+  background-image: url("../images/beach.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
+  background-image: url("../images/beach.jpg"), linear-gradient(to top, #333333, white);
+}
+
+.projects .camera {
+  background-image: url("../images/camera.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
+  background-image: url("../images/camera.jpg"), linear-gradient(to top, #333333, white);
+}
+
+.projects .coffee {
+  background-image: url("../images/coffee.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
+  background-image: url("../images/coffee.jpg"), linear-gradient(to top, #333333, white);
+}
+
+.projects .jump {
+  background-image: url("../images/jump.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
+  background-image: url("../images/jump.jpg"), linear-gradient(to top, #333333, white);
+}
+
+.projects .path {
+  background-image: url("../images/path.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
+  background-image: url("../images/path.jpg"), linear-gradient(to top, #333333, white);
+}
+
+.projects .starry {
+  background-image: url("../images/starry.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
+  background-image: url("../images/starry.jpg"), linear-gradient(to top, #333333, white);
+}
+
+.projects__type {
+  justify-self: flex-start;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-family: "IBM Plex Sans", monospace, sans-serif;
+  font-weight: bold;
+  background-color: #00faa0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #232733;
+  border-radius: 13px;
+  padding: 0.1em 0.5em;
+}
+
+.projects__name {
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #e6e6fa;
+}
+
+.projects__desc {
+  font-family: "IBM Plex Sans", monospace, sans-serif;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: #e6e6fa;
 }
 /*# sourceMappingURL=main.css.map */
