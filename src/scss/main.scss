@@ -281,3 +281,56 @@ body {
 		}
 	}
 }
+
+.services {
+	margin: 0 17rem;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&__title {
+		@include desktop-heading-2();
+		margin: 2rem 0;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: "";
+			@include color-primary("to left");
+			width: 70%;
+			height: 30%;
+			right: 0;
+			top: 40%;
+		}
+	}
+
+	&__ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		column-gap: 3rem;
+		row-gap: 2rem;
+
+		list-style: none;
+	}
+
+	.bullet {
+		color: $color-secondary;
+		padding: 1rem;
+		padding-left: 1.2rem;
+		padding-right: 1.4rem;
+	}
+
+	&__li {
+		font-family: $ff-ibm-plex-mono;
+		font-weight: $fw-ibm-plex-mono-bold;
+		font-size: 1.5rem;
+		display: flex;
+		align-items: center;
+
+		background-color: $color-neutral-primary-15;
+		border-radius: 8px;
+		padding: 1rem 0;
+	}
+}
