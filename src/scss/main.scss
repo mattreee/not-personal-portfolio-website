@@ -375,9 +375,9 @@ body {
 		flex-direction: column;
 		justify-content: space-between;
 
-		&:hover {
-			background-blend-mode: unset;
-		}
+		// &:hover {
+		// 	background-blend-mode: unset;
+		// }
 	}
 
 	$backgrounds: (
@@ -392,7 +392,14 @@ body {
 	@each $name, $background in $backgrounds {
 		.#{$name} {
 			background-image: #{$background},
-				linear-gradient(to top, mix($black, $white, 80), $white);
+				linear-gradient(to top, mix($black, $white, 10), $white);
+
+			&:hover {
+				background-image: #{$background},
+					linear-gradient(to top, black 10%, $white);
+				background-color: $color-secondary-10;
+				background-blend-mode: multiply;
+			}
 		}
 	}
 

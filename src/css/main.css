@@ -377,38 +377,76 @@ body {
           justify-content: space-between;
 }
 
-.projects__card:hover {
-  background-blend-mode: unset;
+.projects .beach {
+  background-image: url("../images/beach.jpg"), -webkit-gradient(linear, left bottom, left top, from(#e6e6e6), to(white));
+  background-image: url("../images/beach.jpg"), linear-gradient(to top, #e6e6e6, white);
 }
 
-.projects .beach {
-  background-image: url("../images/beach.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
-  background-image: url("../images/beach.jpg"), linear-gradient(to top, #333333, white);
+.projects .beach:hover {
+  background-image: url("../images/beach.jpg"), -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), to(white));
+  background-image: url("../images/beach.jpg"), linear-gradient(to top, black 10%, white);
+  background-color: #00faa01a;
+  background-blend-mode: multiply;
 }
 
 .projects .camera {
-  background-image: url("../images/camera.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
-  background-image: url("../images/camera.jpg"), linear-gradient(to top, #333333, white);
+  background-image: url("../images/camera.jpg"), -webkit-gradient(linear, left bottom, left top, from(#e6e6e6), to(white));
+  background-image: url("../images/camera.jpg"), linear-gradient(to top, #e6e6e6, white);
+}
+
+.projects .camera:hover {
+  background-image: url("../images/camera.jpg"), -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), to(white));
+  background-image: url("../images/camera.jpg"), linear-gradient(to top, black 10%, white);
+  background-color: #00faa01a;
+  background-blend-mode: multiply;
 }
 
 .projects .coffee {
-  background-image: url("../images/coffee.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
-  background-image: url("../images/coffee.jpg"), linear-gradient(to top, #333333, white);
+  background-image: url("../images/coffee.jpg"), -webkit-gradient(linear, left bottom, left top, from(#e6e6e6), to(white));
+  background-image: url("../images/coffee.jpg"), linear-gradient(to top, #e6e6e6, white);
+}
+
+.projects .coffee:hover {
+  background-image: url("../images/coffee.jpg"), -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), to(white));
+  background-image: url("../images/coffee.jpg"), linear-gradient(to top, black 10%, white);
+  background-color: #00faa01a;
+  background-blend-mode: multiply;
 }
 
 .projects .jump {
-  background-image: url("../images/jump.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
-  background-image: url("../images/jump.jpg"), linear-gradient(to top, #333333, white);
+  background-image: url("../images/jump.jpg"), -webkit-gradient(linear, left bottom, left top, from(#e6e6e6), to(white));
+  background-image: url("../images/jump.jpg"), linear-gradient(to top, #e6e6e6, white);
+}
+
+.projects .jump:hover {
+  background-image: url("../images/jump.jpg"), -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), to(white));
+  background-image: url("../images/jump.jpg"), linear-gradient(to top, black 10%, white);
+  background-color: #00faa01a;
+  background-blend-mode: multiply;
 }
 
 .projects .path {
-  background-image: url("../images/path.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
-  background-image: url("../images/path.jpg"), linear-gradient(to top, #333333, white);
+  background-image: url("../images/path.jpg"), -webkit-gradient(linear, left bottom, left top, from(#e6e6e6), to(white));
+  background-image: url("../images/path.jpg"), linear-gradient(to top, #e6e6e6, white);
+}
+
+.projects .path:hover {
+  background-image: url("../images/path.jpg"), -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), to(white));
+  background-image: url("../images/path.jpg"), linear-gradient(to top, black 10%, white);
+  background-color: #00faa01a;
+  background-blend-mode: multiply;
 }
 
 .projects .starry {
-  background-image: url("../images/starry.jpg"), -webkit-gradient(linear, left bottom, left top, from(#333333), to(white));
-  background-image: url("../images/starry.jpg"), linear-gradient(to top, #333333, white);
+  background-image: url("../images/starry.jpg"), -webkit-gradient(linear, left bottom, left top, from(#e6e6e6), to(white));
+  background-image: url("../images/starry.jpg"), linear-gradient(to top, #e6e6e6, white);
+}
+
+.projects .starry:hover {
+  background-image: url("../images/starry.jpg"), -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), to(white));
+  background-image: url("../images/starry.jpg"), linear-gradient(to top, black 10%, white);
+  background-color: #00faa01a;
+  background-blend-mode: multiply;
 }
 
 .projects__type {
