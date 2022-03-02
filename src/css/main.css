@@ -8,7 +8,6 @@
 body {
   background-color: #00050f;
   color: white;
-  overflow-x: hidden;
 }
 
 .bold-text {
@@ -83,6 +82,7 @@ body {
 
 .intro {
   padding: 9rem 0;
+  overflow-x: hidden;
 }
 
 .intro__hi {

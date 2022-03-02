@@ -94,7 +94,6 @@ $color-error: #dc0000;
 body {
 	background-color: $color-bg;
 	color: white;
-	overflow-x: hidden;
 }
 
 .bold-text {
@@ -157,6 +156,7 @@ body {
 
 .intro {
 	padding: 9rem 0;
+	overflow-x: hidden;
 
 	&__hi {
 		@include desktop-heading-2();
