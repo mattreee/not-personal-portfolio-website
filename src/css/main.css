@@ -530,6 +530,197 @@ body {
   color: transparent;
 }
 
+.experience__timeline-container {
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.experience__timeline-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+}
+
+.experience__date {
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  color: #00faa0;
+  margin-top: 0.2rem;
+  position: relative;
+}
+
+.experience__date::before {
+  position: absolute;
+  content: "\2022";
+  font-size: 1.35rem;
+  right: -2.5rem;
+}
+
+.experience__date::after {
+  position: absolute;
+  content: "";
+  background-color: #00faa0;
+  width: 1px;
+  height: 135%;
+  right: -2.14rem;
+  bottom: -4rem;
+}
+
+.experience__text-title {
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #e6e6fa;
+}
+
+.experience__text-date {
+  font-family: "IBM Plex Sans", monospace, sans-serif;
+  color: #87879b;
+}
+
+.experience__text-desc {
+  font-family: "IBM Plex Sans", monospace, sans-serif;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: #e6e6fa;
+}
+
+.contact {
+  height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.contact__intro-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  margin-right: -30rem;
+}
+
+.contact__title {
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 700;
+  color: #e6e6fa;
+  width: 65%;
+}
+
+.contact__title-bar {
+  background-image: -webkit-gradient(linear, right top, left top, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
+  background-image: linear-gradient(to left, #00faa0, #0587b9, #001441, #001441);
+  width: 60%;
+  color: transparent;
+}
+
+.contact__email {
+  font-family: "IBM Plex Sans", monospace, sans-serif;
+  letter-spacing: 0.26px;
+  color: #87879b;
+}
+
+.contact__wrapper {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
+  background-image: linear-gradient(to bottom, #00faa0, #0587b9, #001441, #001441);
+  padding: 1px;
+  border-radius: 8px;
+  margin-left: -15rem;
+}
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: start;
+  gap: 0.5rem;
+  background-color: #00050f;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact__form ::-webkit-input-placeholder {
+  color: #87879b;
+}
+
+.contact__form :-ms-input-placeholder {
+  color: #87879b;
+}
+
+.contact__form ::-ms-input-placeholder {
+  color: #87879b;
+}
+
+.contact__form ::placeholder {
+  color: #87879b;
+}
+
+.contact__form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__form-label {
+  font-family: "IBM Plex Sans", monospace, sans-serif;
+  font-size: 1.25rem;
+}
+
+.contact__form-text-input {
+  background-color: #232733;
+  height: 3rem;
+  font-size: 1.25rem;
+  padding: 0.5em;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.contact__form textarea {
+  width: 368px;
+  height: 184px;
+}
+
+.contact__submit {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 1.25rem;
+  padding: 0.5em 1em;
+  background-color: #00050f;
+  border: 2px solid #00faa0;
+  border-radius: 8px;
+  color: #00faa0;
+}
+
 @media only screen and (max-width: 1300px) {
   .about {
         grid-template-areas: "image" "desc" "skills";
