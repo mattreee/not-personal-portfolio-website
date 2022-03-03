@@ -185,18 +185,16 @@ body {
 }
 
 .about {
-	// margin: 0 15rem;
-	margin: 0 15vw;
+	margin: 0 15vmax;
 	padding: 2em 0;
-	// max-width: 800px;
-	width: 50vw;
+	width: 50vmax;
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas:
 		"image desc"
 		"skills skills";
-	column-gap: 2rem;
+	column-gap: 1.5rem;
 	row-gap: 1.5rem;
 
 	&__desc {
@@ -204,18 +202,25 @@ body {
 	}
 
 	&__image-container {
-		grid-area: image;
-		@include color-primary("to bottom");
-		margin: 1.5rem 1rem;
-		border-radius: 8px;
-		max-width: 27vw;
+		position: relative;
+		align-self: start;
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 5%;
+			right: 15%;
+			width: 90%;
+			height: 99%;
+			@include color-primary("to bottom");
+			border-radius: 8px;
+			z-index: -1;
+		}
 	}
 
 	&__image {
+		grid-area: image;
 		border-radius: 8px;
-		transform: translate(1.1em, -0.8em);
-
-		max-width: 30vmax;
 	}
 
 	&__title-container {
@@ -242,6 +247,7 @@ body {
 
 	&__desc-item {
 		@include desktop-body();
+		font-size: 2.5vmin;
 	}
 
 	&__skills-gradient {
@@ -249,22 +255,18 @@ body {
 
 		border-radius: 8px;
 		@include color-primary("to bottom");
+		padding: 0.1rem;
 	}
 
 	&__skills-container {
-		display: flex;
+		display: grid;
+		justify-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		row-gap: 1rem;
 
-		justify-content: center;
-		width: fit-content;
-		gap: 2rem;
-		padding: 2rem 1rem;
-
-		margin: 0 auto;
-		margin-top: 0.05em;
-		border-radius: 8px;
 		background-color: $color-bg;
-		width: 99.5%;
-		height: 99%;
+		padding: 1rem;
+		border-radius: 8px;
 	}
 
 	.skills-title {
@@ -292,9 +294,9 @@ body {
 }
 
 .services {
-	// margin: 0 15rem;
 	margin: 0 15vw;
-	max-width: 800px;
+	// max-width: 800px;
+	width: 50vmax;
 	height: 90vh;
 	display: flex;
 	flex-direction: column;
@@ -355,7 +357,8 @@ body {
 		display: flex;
 		align-items: center;
 		margin: 0 15vw;
-		max-width: 800px;
+		// max-width: 800px;
+		width: 50vmax;
 	}
 
 	&__title {
@@ -437,11 +440,13 @@ body {
 
 .experience {
 	margin: 0 15vw;
+	margin-top: 10rem;
 
 	&__title-container {
 		display: flex;
 		align-items: center;
-		max-width: 800px;
+		// max-width: 800px;
+		width: 50vmax;
 	}
 
 	&__title {
@@ -456,7 +461,8 @@ body {
 	}
 
 	&__timeline-container {
-		max-width: 800px;
+		// max-width: 800px;
+		width: 50vmax;
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
@@ -545,7 +551,7 @@ body {
 
 	&__wrapper {
 		@include color-primary("to bottom");
-		padding: 1px;
+		padding: 0.06rem;
 		border-radius: 8px;
 
 		margin-left: -15rem;
@@ -558,7 +564,7 @@ body {
 		gap: 0.5rem;
 
 		background-color: $color-bg;
-		padding: 2rem;
+		padding: 2.5rem;
 		border-radius: 8px;
 
 		::placeholder {
@@ -618,20 +624,20 @@ body {
 	}
 }
 
-@media only screen and (max-width: 1300px) {
-	.about {
-		grid-template-areas:
-			"image"
-			"desc"
-			"skills";
-	}
-	&__desc {
-		grid-area: desc;
-	}
-	&__image-container {
-		grid-area: image;
-	}
-	&__skills-gradient {
-		grid-area: skills;
-	}
-}
+// @media only screen and (max-width: 1300px) {
+// 	.about {
+// 		grid-template-areas:
+// 			"image"
+// 			"desc"
+// 			"skills";
+// 	}
+// 	&__desc {
+// 		grid-area: desc;
+// 	}
+// 	&__image-container {
+// 		grid-area: image;
+// 	}
+// 	&__skills-gradient {
+// 		grid-area: skills;
+// 	}
+// }

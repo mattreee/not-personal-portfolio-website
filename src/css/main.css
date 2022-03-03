@@ -119,16 +119,16 @@ body {
 }
 
 .about {
-  margin: 0 15vw;
+  margin: 0 15vmax;
   padding: 2em 0;
-  width: 50vw;
+  width: 50vmax;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "image desc" "skills skills";
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
   row-gap: 1.5rem;
 }
 
@@ -139,21 +139,30 @@ body {
 }
 
 .about__image-container {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: image;
+  position: relative;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.about__image-container::before {
+  position: absolute;
+  content: "";
+  top: 5%;
+  right: 15%;
+  width: 90%;
+  height: 99%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
   background-image: linear-gradient(to bottom, #00faa0, #0587b9, #001441, #001441);
-  margin: 1.5rem 1rem;
   border-radius: 8px;
-  max-width: 27vw;
+  z-index: -1;
 }
 
 .about__image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image;
   border-radius: 8px;
-  -webkit-transform: translate(1.1em, -0.8em);
-          transform: translate(1.1em, -0.8em);
-  max-width: 30vmax;
 }
 
 .about__title-container {
@@ -198,6 +207,7 @@ body {
   line-height: 2rem;
   font-weight: 400;
   color: #e6e6fa;
+  font-size: 2.5vmin;
 }
 
 .about__skills-gradient {
@@ -208,26 +218,19 @@ body {
   border-radius: 8px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
   background-image: linear-gradient(to bottom, #00faa0, #0587b9, #001441, #001441);
+  padding: 0.1rem;
 }
 
 .about__skills-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  margin: 0 auto;
-  margin-top: 0.05em;
-  border-radius: 8px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  row-gap: 1rem;
   background-color: #00050f;
-  width: 99.5%;
-  height: 99%;
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 .about .skills-title {
@@ -262,7 +265,7 @@ body {
 
 .services {
   margin: 0 15vw;
-  max-width: 800px;
+  width: 50vmax;
   height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,7 +353,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 15vw;
-  max-width: 800px;
+  width: 50vmax;
 }
 
 .projects__title {
@@ -502,6 +505,7 @@ body {
 
 .experience {
   margin: 0 15vw;
+  margin-top: 10rem;
 }
 
 .experience__title-container {
@@ -511,7 +515,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 800px;
+  width: 50vmax;
 }
 
 .experience__title {
@@ -531,7 +535,7 @@ body {
 }
 
 .experience__timeline-container {
-  max-width: 800px;
+  width: 50vmax;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -645,7 +649,7 @@ body {
 .contact__wrapper {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
   background-image: linear-gradient(to bottom, #00faa0, #0587b9, #001441, #001441);
-  padding: 1px;
+  padding: 0.06rem;
   border-radius: 8px;
   margin-left: -15rem;
 }
@@ -661,7 +665,7 @@ body {
   justify-self: start;
   gap: 0.5rem;
   background-color: #00050f;
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 8px;
 }
 
@@ -740,26 +744,5 @@ body {
 
 .footer__link {
   color: #87879b;
-}
-
-@media only screen and (max-width: 1300px) {
-  .about {
-        grid-template-areas: "image" "desc" "skills";
-  }
-  __desc {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: desc;
-  }
-  __image-container {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: image;
-  }
-  __skills-gradient {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: skills;
-  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -32,7 +32,6 @@ const About = () => {
 					</p>
 				</div>
 			</div>
-
 			<div className="about__skills-gradient">
 				<div className="about__skills-container">
 					<ul className="about__skills-item">
