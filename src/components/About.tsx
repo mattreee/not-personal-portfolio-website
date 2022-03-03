@@ -7,7 +7,10 @@ const About = () => {
 				<img className="about__image" src={AboutImage} alt="" />
 			</div>
 			<div className="about__desc">
-				<h2 className="about__title">about</h2>
+				<div className="about__title-container">
+					<h2 className="about__title">about</h2>
+					<div className="about__title-bar">a</div>
+				</div>
 				<div className="about__desc-container">
 					<p className="about__desc-item">
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi iure

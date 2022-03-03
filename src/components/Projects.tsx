@@ -1,7 +1,10 @@
 const Projects = () => {
 	return (
-		<section className="projects">
-			<h2 className="projects__title">Projects</h2>
+		<section className="projects" id="projects">
+			<div className="projects__title-container">
+				<h2 className="projects__title">Projects</h2>
+				<div className="projects__title-bar">a</div>
+			</div>
 			<div className="projects__cards">
 				<div className="projects__card beach">
 					<p className="projects__type">App</p>

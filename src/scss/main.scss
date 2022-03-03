@@ -185,9 +185,11 @@ body {
 }
 
 .about {
-	margin: 0 17rem;
+	// margin: 0 15rem;
+	margin: 0 15vw;
 	padding: 2em 0;
-	width: 50%;
+	// max-width: 800px;
+	width: 50vw;
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -204,28 +206,32 @@ body {
 	&__image-container {
 		grid-area: image;
 		@include color-primary("to bottom");
-		margin: 1.5rem 0.8rem;
+		margin: 1.5rem 1rem;
 		border-radius: 8px;
+		max-width: 27vw;
 	}
 
 	&__image {
 		border-radius: 8px;
 		transform: translate(1.1em, -0.8em);
+
+		max-width: 30vmax;
+	}
+
+	&__title-container {
+		display: flex;
+		align-items: center;
 	}
 
 	&__title {
 		@include desktop-heading-2();
-		position: relative;
+	}
 
-		&::before {
-			position: absolute;
-			content: "";
-			@include color-primary("to left");
-			width: 50%;
-			height: 25%;
-			right: 0;
-			top: 40%;
-		}
+	&__title-bar {
+		@include color-primary("to left");
+		width: 100%;
+		margin-left: 2rem;
+		color: transparent;
 	}
 
 	&__desc-container {
@@ -247,6 +253,7 @@ body {
 
 	&__skills-container {
 		display: flex;
+
 		justify-content: center;
 		width: fit-content;
 		gap: 2rem;
@@ -285,26 +292,30 @@ body {
 }
 
 .services {
-	margin: 0 17rem;
+	// margin: 0 15rem;
+	margin: 0 15vw;
+	max-width: 800px;
 	height: 90vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 
+	&__title-container {
+		display: flex;
+		align-items: center;
+	}
+
 	&__title {
 		@include desktop-heading-2();
 		margin: 2rem 0;
 		position: relative;
+	}
 
-		&::before {
-			position: absolute;
-			content: "";
-			@include color-primary("to left");
-			width: 70%;
-			height: 30%;
-			right: 0;
-			top: 40%;
-		}
+	&__title-bar {
+		@include color-primary("to left");
+		width: 100%;
+		margin-left: 4rem;
+		color: transparent;
 	}
 
 	&__ul {
@@ -340,20 +351,22 @@ body {
 .projects {
 	margin-top: 6rem;
 
+	&__title-container {
+		display: flex;
+		align-items: center;
+		margin: 0 15vw;
+		max-width: 800px;
+	}
+
 	&__title {
 		@include desktop-heading-2();
-		margin: 0 17rem;
-		position: relative;
+	}
 
-		&::before {
-			position: absolute;
-			content: "";
-			@include color-primary("to left");
-			width: 70%;
-			height: 30%;
-			right: 0;
-			top: 40%;
-		}
+	&__title-bar {
+		@include color-primary("to left");
+		width: 100%;
+		margin-left: 3.5rem;
+		color: transparent;
 	}
 
 	&__cards {
@@ -365,19 +378,15 @@ body {
 	}
 
 	&__card {
+		background-color: darken($color-secondary, 35);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-blend-mode: multiply;
-		background-color: darken($color-secondary, 35);
 		padding: 2rem;
 
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-
-		// &:hover {
-		// 	background-blend-mode: unset;
-		// }
 	}
 
 	$backgrounds: (
@@ -396,7 +405,7 @@ body {
 
 			&:hover {
 				background-image: #{$background},
-					linear-gradient(to top, black 10%, $white);
+					linear-gradient(to top, $black 10%, $white);
 				background-color: $color-secondary-10;
 				background-blend-mode: multiply;
 			}
@@ -414,7 +423,7 @@ body {
 		width: fit-content;
 		color: $color-neutral-primary-15;
 		border-radius: 13px;
-		padding: 0.1em 0.5em;
+		padding: 0.1em 0.7em;
 	}
 
 	&__name {
@@ -423,5 +432,45 @@ body {
 
 	&__desc {
 		@include desktop-body-small();
+	}
+}
+
+.experience {
+	// padding: 0 15rem;
+	margin: 0 15vw;
+
+	&__title-container {
+		display: flex;
+		align-items: center;
+		max-width: 800px;
+	}
+
+	&__title {
+		@include desktop-heading-2();
+	}
+
+	&__title-bar {
+		@include color-primary("to left");
+		width: 100%;
+		margin-left: 4rem;
+		color: transparent;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	.about {
+		grid-template-areas:
+			"image"
+			"desc"
+			"skills";
+	}
+	&__desc {
+		grid-area: desc;
+	}
+	&__image-container {
+		grid-area: image;
+	}
+	&__skills-gradient {
+		grid-area: skills;
 	}
 }
