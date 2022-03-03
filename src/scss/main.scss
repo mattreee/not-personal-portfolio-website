@@ -517,11 +517,12 @@ body {
 	grid-template-columns: 1fr 1fr;
 	place-items: center;
 
+	margin-top: 10rem;
+
 	&__intro-container {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
-		// justify-self: end;
+		gap: 1rem;
 		margin-right: -30rem;
 	}
 
@@ -613,7 +614,6 @@ body {
 	}
 
 	&__link {
-		// text-decoration: none;
 		color: $color-neutral-primary-60;
 	}
 }

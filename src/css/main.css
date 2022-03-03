@@ -605,6 +605,7 @@ body {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   place-items: center;
+  margin-top: 10rem;
 }
 
 .contact__intro-container {
@@ -615,7 +616,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin-right: -30rem;
 }
 
