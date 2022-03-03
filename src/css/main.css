@@ -721,6 +721,26 @@ body {
   color: #00faa0;
 }
 
+.footer {
+  background-color: #232733;
+  color: #87879b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "IBM Plex Sans", monospace, sans-serif;
+}
+
+.footer__text {
+  margin: 0 auto;
+}
+
+.footer__link {
+  color: #87879b;
+}
+
 @media only screen and (max-width: 1300px) {
   .about {
         grid-template-areas: "image" "desc" "skills";
