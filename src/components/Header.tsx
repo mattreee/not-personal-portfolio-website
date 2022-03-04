@@ -1,16 +1,23 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
 
 const Header = ({ children }: any) => {
-	// useEffect(() => {
-	// 	window.addEventListener("click", (e) => {
-	// 		// @ts-ignore
-	// 		let id = e.target.getAttribute("id");
+	const toggleLangSelect = (e: any) => {
+		const pt = document.querySelector("#pt");
+		const en = document.querySelector("#en");
 
-	// 		if (id === "pt" || id === "en") {
-	// 			console.log("tets");
-	// 		}
-	// 	});
-	// });
+		if (e.target === pt || e.target === en) {
+			pt?.classList.toggle("lang-selected");
+			en?.classList.toggle("lang-selected");
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("click", toggleLangSelect);
+
+		return () => {
+			window.removeEventListener("click", toggleLangSelect);
+		};
+	});
 
 	return (
 		<header className="header">
@@ -18,7 +25,7 @@ const Header = ({ children }: any) => {
 				<button className="header__button" id="pt">
 					pt
 				</button>
-				<button className="header__button" id="en">
+				<button className="header__button lang-selected" id="en">
 					en
 				</button>
 			</div>

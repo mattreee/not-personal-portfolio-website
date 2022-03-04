@@ -117,6 +117,10 @@ body {
 	&__lang {
 		display: flex;
 		gap: 1rem;
+
+		.lang-selected {
+			font-weight: $fw-ibm-plex-mono-bold;
+		}
 	}
 
 	&__button {
@@ -194,8 +198,10 @@ body {
 	grid-template-areas:
 		"image desc"
 		"skills skills";
-	column-gap: 1.5rem;
+	column-gap: 0.5rem;
 	row-gap: 1.5rem;
+
+	font-size: 2.5vmin;
 
 	&__desc {
 		grid-area: desc;
@@ -208,8 +214,10 @@ body {
 		&::before {
 			position: absolute;
 			content: "";
-			top: 5%;
-			right: 15%;
+			// top: 5%;
+			top: 1.5em;
+			// right: 15%;
+			right: 4em;
 			width: 90%;
 			height: 99%;
 			@include color-primary("to bottom");
@@ -221,6 +229,7 @@ body {
 	&__image {
 		grid-area: image;
 		border-radius: 8px;
+		max-width: 100%;
 	}
 
 	&__title-container {
