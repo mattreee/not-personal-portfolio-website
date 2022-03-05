@@ -760,8 +760,19 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-  .header {
-    display: none;
+  .intro {
+    padding: 0;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .intro__hi {
     font-family: "IBM Plex Mono", monospace, sans-serif;
@@ -780,10 +791,14 @@ body {
     margin: 0 2.5rem;
     padding: 0;
     width: auto;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: "image" "desc" "skills";
-    row-gap: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
   }
   .about__image-container {
     margin: 0 auto;
@@ -799,7 +814,7 @@ body {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: image;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     width: 312px;
     height: 312px;
     border-radius: 8px;
@@ -812,8 +827,8 @@ body {
     color: #e6e6fa;
   }
   .about__desc {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: desc;
   }
   .about__desc-item {
@@ -823,17 +838,31 @@ body {
     font-weight: 400;
   }
   .about__skills-gradient {
-    -ms-grid-row: 3;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: skills;
     background: none;
     padding: 0;
+  }
+  .about__skills-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-right: -2rem;
+    white-space: nowrap;
+    overflow-x: auto;
   }
   .about__skills-mobile-gradient {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
     background-image: linear-gradient(to bottom, #00faa0, #0587b9, #001441, #001441);
     padding: 1.5px;
     border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .about__skills-item {
     background-color: #00050f;
