@@ -677,9 +677,9 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-	// .header {
-	// 	display: none;
-	// }
+	.header {
+		display: none;
+	}
 
 	.intro {
 		padding: 0;
@@ -784,7 +784,34 @@ body {
 	}
 
 	.services {
-		display: none;
+		margin: 0 2rem;
+		margin-bottom: 3rem;
+		width: auto;
+		height: auto;
+
+		&__title {
+			@include mobile-heading-2();
+		}
+
+		&__title-bar {
+			margin-left: 1em;
+			font-size: 0.5rem;
+		}
+
+		&__ul {
+			grid-template-columns: 1fr;
+			row-gap: 1rem;
+		}
+
+		.bullet {
+			font-size: 2rem;
+		}
+
+		&__li {
+			@include mobile-heading-3();
+			padding: 0;
+			border-radius: 16px;
+		}
 	}
 
 	.projects {
