@@ -77,11 +77,20 @@ body {
 }
 
 .navbar__contact {
+  font-family: "IBM Plex Sans", monospace, sans-serif;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: #e6e6fa;
   color: #00faa0;
   font-size: 1.2rem;
   border: 2px solid #00faa0;
   border-radius: 8px;
   padding: 0.4em 1.5rem;
+}
+
+.navbar__contact:hover {
+  background-color: #00faa01a;
 }
 
 .intro {
@@ -134,7 +143,6 @@ body {
   -webkit-column-gap: 0.5rem;
           column-gap: 0.5rem;
   row-gap: 1.5rem;
-  font-size: 2.5vmin;
 }
 
 .about__desc {
@@ -213,7 +221,6 @@ body {
   line-height: 2rem;
   font-weight: 400;
   color: #e6e6fa;
-  font-size: 2.5vmin;
 }
 
 .about__skills-gradient {
@@ -750,5 +757,100 @@ body {
 
 .footer__link {
   color: #87879b;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    display: none;
+  }
+  .intro__hi {
+    font-family: "IBM Plex Mono", monospace, sans-serif;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: #e6e6fa;
+    padding: 0 2rem;
+  }
+  .intro__desc {
+    padding: 0 2rem;
+    width: auto;
+    font-size: 1rem;
+  }
+  .about {
+    margin: 0 2.5rem;
+    padding: 0;
+    width: auto;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "image" "desc" "skills";
+    row-gap: 2rem;
+  }
+  .about__image-container {
+    margin: 0 auto;
+    width: 312px;
+    height: 100%;
+  }
+  .about__image-container::before {
+    inset: 1rem 1rem -1rem 0;
+    width: auto;
+    height: auto;
+  }
+  .about__image {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: image;
+    margin-left: 1rem;
+    width: 312px;
+    height: 312px;
+    border-radius: 8px;
+  }
+  .about__title {
+    font-family: "IBM Plex Mono", monospace, sans-serif;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: #e6e6fa;
+  }
+  .about__desc {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: desc;
+  }
+  .about__desc-item {
+    font-family: "IBM Plex Sans", monospace, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+  .about__skills-gradient {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: skills;
+    background: none;
+    padding: 0;
+  }
+  .about__skills-mobile-gradient {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00faa0), color-stop(#0587b9), color-stop(#001441), to(#001441));
+    background-image: linear-gradient(to bottom, #00faa0, #0587b9, #001441, #001441);
+    padding: 1.5px;
+    border-radius: 8px;
+  }
+  .about__skills-item {
+    background-color: #00050f;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .services {
+    display: none;
+  }
+  .projects {
+    display: none;
+  }
+  .experience {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

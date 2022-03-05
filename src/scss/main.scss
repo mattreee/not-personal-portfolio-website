@@ -31,6 +31,22 @@ $fw-ibm-plex-sans-regular: 400;
 	color: $color-neutral-primary;
 }
 
+@mixin mobile-heading-2 {
+	font-family: $ff-ibm-plex-mono;
+	font-size: 1.75rem;
+	line-height: 2.25rem;
+	font-weight: $fw-ibm-plex-mono-bold;
+	color: $color-neutral-primary;
+}
+
+@mixin mobile-heading-3 {
+	font-family: $ff-ibm-plex-mono;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	font-weight: bold;
+	color: $color-neutral-primary;
+}
+
 // Body Text - Mixins
 @mixin desktop-body {
 	font-family: $ff-ibm-plex-mono-sans;
@@ -53,6 +69,30 @@ $fw-ibm-plex-sans-regular: 400;
 	font-size: 1.125rem;
 	line-height: 2rem;
 	font-weight: $fw-ibm-plex-sans-regular;
+	color: $color-secondary;
+}
+
+@mixin mobile-body {
+	font-family: $fw-ibm-plex-sans-regular;
+	font-size: 1rem;
+	line-height: 1.75rem;
+	font-weight: normal;
+	color: $color-neutral-primary;
+}
+
+@mixin mobile-body-small {
+	font-family: $ff-ibm-plex-mono-sans;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	font-weight: $fw-ibm-plex-sans-regular;
+	// letter-spacing: 0.22px;
+}
+
+@mixin mobile-link {
+	font-family: $ff-ibm-plex-mono-sans;
+	font-size: 1rem;
+	line-height: 1.75rem;
+	font-weight: normal;
 	color: $color-secondary;
 }
 
@@ -152,11 +192,17 @@ body {
 	}
 
 	&__contact {
+		@include desktop-body();
+
 		color: $color-secondary;
 		font-size: 1.2rem;
 		border: 2px solid $color-secondary;
 		border-radius: 8px;
 		padding: 0.4em 1.5rem;
+
+		&:hover {
+			background-color: $color-secondary-10;
+		}
 	}
 }
 
@@ -201,7 +247,7 @@ body {
 	column-gap: 0.5rem;
 	row-gap: 1.5rem;
 
-	font-size: 2.5vmin;
+	// font-size: 2.5vmin;
 
 	&__desc {
 		grid-area: desc;
@@ -214,9 +260,7 @@ body {
 		&::before {
 			position: absolute;
 			content: "";
-			// top: 5%;
 			top: 1.5em;
-			// right: 15%;
 			right: 4em;
 			width: 90%;
 			height: 99%;
@@ -256,7 +300,6 @@ body {
 
 	&__desc-item {
 		@include desktop-body();
-		font-size: 2.5vmin;
 	}
 
 	&__skills-gradient {
@@ -633,20 +676,102 @@ body {
 	}
 }
 
-// @media only screen and (max-width: 1300px) {
-// 	.about {
-// 		grid-template-areas:
-// 			"image"
-// 			"desc"
-// 			"skills";
-// 	}
-// 	&__desc {
-// 		grid-area: desc;
-// 	}
-// 	&__image-container {
-// 		grid-area: image;
-// 	}
-// 	&__skills-gradient {
-// 		grid-area: skills;
-// 	}
-// }
+@media only screen and (max-width: 1000px) {
+	.header {
+		display: none;
+	}
+
+	.intro {
+		&__hi {
+			@include mobile-heading-2();
+
+			padding: 0 2rem;
+		}
+
+		&__desc {
+			padding: 0 2rem;
+			width: auto;
+			font-size: 1rem;
+		}
+	}
+
+	.about {
+		margin: 0 2.5rem;
+		padding: 0;
+		width: auto;
+
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"image"
+			"desc"
+			"skills";
+		row-gap: 2rem;
+
+		&__image-container {
+			margin: 0 auto;
+			width: 312px;
+			height: 100%;
+
+			&::before {
+				inset: 1rem 1rem -1rem 0;
+				width: auto;
+				height: auto;
+			}
+		}
+
+		&__image {
+			grid-area: image;
+			margin-left: 1rem;
+			width: 312px;
+			height: 312px;
+			border-radius: 8px;
+		}
+
+		&__title {
+			@include mobile-heading-2;
+		}
+
+		&__desc {
+			grid-area: desc;
+		}
+
+		&__desc-item {
+			@include mobile-body-small();
+		}
+
+		&__skills-gradient {
+			grid-area: skills;
+
+			background: none;
+			padding: 0;
+		}
+
+		&__skills-mobile-gradient {
+			@include color-primary("to bottom");
+			padding: 1.5px;
+			border-radius: 8px;
+		}
+
+		&__skills-item {
+			background-color: $color-bg;
+			padding: 1rem;
+			border-radius: 8px;
+		}
+	}
+
+	.services {
+		display: none;
+	}
+
+	.projects {
+		display: none;
+	}
+
+	.experience {
+		display: none;
+	}
+
+	.contact {
+		display: none;
+	}
+}

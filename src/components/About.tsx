@@ -34,30 +34,38 @@ const About = () => {
 			</div>
 			<div className="about__skills-gradient">
 				<div className="about__skills-container">
-					<ul className="about__skills-item">
-						<li className="skills-title">front-end</li>
-						<li className="about__skills-li">HTML 5</li>
-						<li className="about__skills-li">CSS 3</li>
-						<li className="about__skills-li">Javascript</li>
-						<li className="about__skills-li">Typescript</li>
-					</ul>
-					<ul className="about__skills-item">
-						<li className="skills-title">web/mobile</li>
-						<li className="about__skills-li">ReactJs</li>
-						<li className="about__skills-li">React Native</li>
-						<li className="about__skills-li">NodeJs</li>
-					</ul>
-					<ul className="about__skills-item">
-						<li className="skills-title">versionamento</li>
-						<li className="about__skills-li">Git</li>
-						<li className="about__skills-li">Github</li>
-						<li className="about__skills-li">Gitlab</li>
-					</ul>
-					<ul className="about__skills-item">
-						<li className="skills-title">banco de dados</li>
-						<li className="about__skills-li">Firebase</li>
-						<li className="about__skills-li">MongoDB</li>
-					</ul>
+					<div className="about__skills-mobile-gradient">
+						<ul className="about__skills-item">
+							<li className="skills-title">front-end</li>
+							<li className="about__skills-li">HTML 5</li>
+							<li className="about__skills-li">CSS 3</li>
+							<li className="about__skills-li">Javascript</li>
+							<li className="about__skills-li">Typescript</li>
+						</ul>
+					</div>
+					<div className="about__skills-mobile-gradient">
+						<ul className="about__skills-item">
+							<li className="skills-title">web/mobile</li>
+							<li className="about__skills-li">ReactJs</li>
+							<li className="about__skills-li">React Native</li>
+							<li className="about__skills-li">NodeJs</li>
+						</ul>
+					</div>
+					<div className="about__skills-mobile-gradient">
+						<ul className="about__skills-item">
+							<li className="skills-title">versionamento</li>
+							<li className="about__skills-li">Git</li>
+							<li className="about__skills-li">Github</li>
+							<li className="about__skills-li">Gitlab</li>
+						</ul>
+					</div>
+					<div className="about__skills-mobile-gradient">
+						<ul className="about__skills-item">
+							<li className="skills-title">banco de dados</li>
+							<li className="about__skills-li">Firebase</li>
+							<li className="about__skills-li">MongoDB</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
