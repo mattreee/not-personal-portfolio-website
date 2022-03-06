@@ -841,6 +841,18 @@ body {
 
 			display: flex;
 			flex-direction: column;
+			width: 100%;
+
+			overflow-x: hidden;
+		}
+
+		&__card {
+			height: 455px;
+			position: absolute;
+		}
+
+		.flickity-page-dots {
+			background-color: red;
 		}
 	}
 

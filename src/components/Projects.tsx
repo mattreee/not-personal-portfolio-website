@@ -1,16 +1,19 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
+import Flickity from "flickity";
 
 const Projects = () => {
-	// useEffect(() => {
-	// 	if (window.innerWidth <= 1000) {
-	// 		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	// 		var flkty = new Flickity(".projects__cards", {
-	// 			// options
-	// 			cellAlign: "left",
-	// 			contain: true,
-	// 		});
-	// 	}
-	// });
+	useEffect(() => {
+		if (window.innerWidth <= 1000) {
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
+			var flkty = new Flickity(".projects__cards", {
+				// options
+				cellAlign: "left",
+				prevNextButtons: false,
+				contain: true,
+				pageDots: false,
+			});
+		}
+	});
 
 	return (
 		<section className="projects" id="projects">
