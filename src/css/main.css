@@ -279,7 +279,7 @@ body {
 .services {
   margin: 0 15vw;
   width: 50vmax;
-  height: 90vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -740,6 +740,7 @@ body {
 }
 
 .footer {
+  margin-top: 7rem;
   background-color: #232733;
   color: #87879b;
   display: -webkit-box;
@@ -829,6 +830,10 @@ body {
     font-weight: 700;
     color: #e6e6fa;
   }
+  .about__title-bar {
+    font-size: 0.5rem;
+    margin-left: 1.5rem;
+  }
   .about__desc {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -886,8 +891,8 @@ body {
     color: #e6e6fa;
   }
   .services__title-bar {
-    margin-left: 1em;
     font-size: 0.5rem;
+    margin-left: 1.5rem;
   }
   .services__ul {
     -ms-grid-columns: 1fr;
@@ -906,8 +911,31 @@ body {
     padding: 0;
     border-radius: 16px;
   }
-  .projects {
-    display: none;
+  .projects__title-container {
+    margin: 0 2rem;
+    width: auto;
+  }
+  .projects__title {
+    font-family: "IBM Plex Mono", monospace, sans-serif;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: #e6e6fa;
+  }
+  .projects__title-bar {
+    font-size: 0.5rem;
+    margin-left: 1.5rem;
+  }
+  .projects__cards {
+    margin: 2.5rem 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .experience {
     display: none;

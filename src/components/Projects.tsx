@@ -1,8 +1,21 @@
+// import { useEffect } from "react";
+
 const Projects = () => {
+	// useEffect(() => {
+	// 	if (window.innerWidth <= 1000) {
+	// 		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	// 		var flkty = new Flickity(".projects__cards", {
+	// 			// options
+	// 			cellAlign: "left",
+	// 			contain: true,
+	// 		});
+	// 	}
+	// });
+
 	return (
 		<section className="projects" id="projects">
 			<div className="projects__title-container">
-				<h2 className="projects__title">Projects</h2>
+				<h2 className="projects__title">projects</h2>
 				<div className="projects__title-bar">a</div>
 			</div>
 			<div className="projects__cards">

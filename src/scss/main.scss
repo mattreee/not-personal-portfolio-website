@@ -349,7 +349,7 @@ body {
 	margin: 0 15vw;
 	// max-width: 800px;
 	width: 50vmax;
-	height: 90vh;
+	height: 80vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -661,6 +661,7 @@ body {
 }
 
 .footer {
+	margin-top: 7rem;
 	background-color: $color-neutral-primary-15;
 	color: $color-neutral-primary-60;
 	display: flex;
@@ -742,6 +743,11 @@ body {
 			@include mobile-heading-2;
 		}
 
+		&__title-bar {
+			font-size: 0.5rem;
+			margin-left: 1.5rem;
+		}
+
 		&__desc {
 			grid-area: desc;
 		}
@@ -794,8 +800,8 @@ body {
 		}
 
 		&__title-bar {
-			margin-left: 1em;
 			font-size: 0.5rem;
+			margin-left: 1.5rem;
 		}
 
 		&__ul {
@@ -815,7 +821,27 @@ body {
 	}
 
 	.projects {
-		display: none;
+		&__title-container {
+			margin: 0 2rem;
+			width: auto;
+		}
+
+		&__title {
+			@include mobile-heading-2();
+		}
+
+		&__title-bar {
+			font-size: 0.5rem;
+			margin-left: 1.5rem;
+		}
+
+		&__cards {
+			margin: 2.5rem 0;
+			padding: 0;
+
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	.experience {
