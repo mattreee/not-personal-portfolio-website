@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Flickity from "flickity";
 
 const Projects = () => {
-	useEffect(() => {
+	const flickityInitializer = () => {
 		if (window.innerWidth <= 1000) {
 			// eslint-disable-next-line @typescript-eslint/no-unused-vars
 			var flkty = new Flickity(".projects__cards", {
@@ -10,9 +10,23 @@ const Projects = () => {
 				cellAlign: "left",
 				prevNextButtons: false,
 				contain: true,
-				pageDots: false,
+				// pageDots: false,
 			});
 		}
+	};
+
+	useEffect(() => {
+		flickityInitializer();
+
+		return () => flickityInitializer();
+	}, []);
+
+	useEffect(() => {
+		window.addEventListener("resize", flickityInitializer);
+
+		return () => {
+			window.removeEventListener("resize", flickityInitializer);
+		};
 	});
 
 	return (
@@ -28,8 +42,7 @@ const Projects = () => {
 						<p className="projects__name">Plant Manager</p>
 						<p className="projects__desc">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et neque
-							tenetur animi reiciendis necessitatibus inventore accusantium
-							deleniti autem, modi, totam dicta delectus quam!
+							tenetur animi reiciendis necessi
 						</p>
 					</div>
 				</div>

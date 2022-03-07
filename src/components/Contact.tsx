@@ -2,8 +2,10 @@ const Contact = () => {
 	return (
 		<section className="contact">
 			<div className="contact__intro-container">
-				<h2 className="contact__title">Do you wanna talk?</h2>
-				<div className="contact__title-bar">a</div>
+				<div className="contact__title-container">
+					<h2 className="contact__title">Do you wanna talk?</h2>
+					<div className="contact__title-bar">a</div>
+				</div>
 				<p className="contact__email">username@email.com</p>
 			</div>
 			<div className="contact__wrapper">

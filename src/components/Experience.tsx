@@ -32,6 +32,9 @@ const Experience = () => {
 							voluptate similique molestias eveniet quos repellendus corrupti
 							eaque?
 						</p>
+						<p className="experience__text-desc">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit?
+						</p>
 					</div>
 				</div>
 			</div>

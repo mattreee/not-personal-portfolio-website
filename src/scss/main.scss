@@ -497,7 +497,6 @@ body {
 	&__title-container {
 		display: flex;
 		align-items: center;
-		// max-width: 800px;
 		width: 50vmax;
 	}
 
@@ -513,7 +512,6 @@ body {
 	}
 
 	&__timeline-container {
-		// max-width: 800px;
 		width: 50vmax;
 		display: flex;
 		flex-direction: column;
@@ -584,6 +582,12 @@ body {
 		margin-right: -30rem;
 	}
 
+	&__title-container {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
 	&__title {
 		@include desktop-heading-2();
 		width: 65%;
@@ -591,11 +595,13 @@ body {
 
 	&__title-bar {
 		@include color-primary("to left");
+		font-size: 0.9rem;
 		width: 60%;
 		color: transparent;
 	}
 
 	&__email {
+		margin-top: 1rem;
 		font-family: $ff-ibm-plex-mono-sans;
 		letter-spacing: 0.26px;
 		color: $color-neutral-primary-60;
@@ -839,11 +845,12 @@ body {
 			margin: 2.5rem 0;
 			padding: 0;
 
+			width: 100%;
 			display: flex;
 			flex-direction: column;
-			width: 100%;
 
 			overflow-x: hidden;
+			overflow-y: hidden;
 		}
 
 		&__card {
@@ -851,16 +858,184 @@ body {
 			position: absolute;
 		}
 
+		&__type {
+			margin-top: 1rem;
+		}
+
+		&__name {
+			@include mobile-heading-3();
+		}
+
+		&__desc {
+			@include mobile-body-small();
+		}
+
 		.flickity-page-dots {
-			background-color: red;
+			margin: 0 auto;
+			margin-top: 0.8rem;
+			display: flex;
+			gap: 10px;
+		}
+
+		.flickity-page-dot {
+			background-color: $color-neutral-primary-15;
+			color: transparent;
+			border: none;
+			border-radius: 50%;
+			width: 8px;
+			height: 8px;
+		}
+
+		.flickity-page-dot.is-selected {
+			background-color: $color-secondary;
 		}
 	}
 
 	.experience {
-		display: none;
+		margin: 0 2rem;
+
+		&__title-container {
+			width: auto;
+		}
+
+		&__title {
+			@include mobile-heading-2();
+		}
+
+		&__title-bar {
+			font-size: 0.5rem;
+			margin-left: 1rem;
+		}
+
+		&__timeline-container {
+			width: auto;
+			margin-top: 2rem;
+
+			margin-left: 2.5rem;
+		}
+
+		&__timeline-item {
+			display: flex;
+			flex-direction: column;
+			gap: 0.4rem;
+		}
+
+		&__date {
+			font-family: $ff-ibm-plex-mono-sans;
+			font-size: 0.95rem;
+			font-weight: bold;
+
+			&::before {
+				position: absolute;
+				content: "\2022";
+				font-size: 2rem;
+				left: -2.5rem;
+				top: -0.7rem;
+				right: auto;
+
+				color: $color-secondary;
+			}
+
+			&::after {
+				position: absolute;
+				content: "";
+				background-color: $color-secondary;
+				width: 1px;
+				height: clamp(42vh, 10vh, 250px);
+				left: -2.1rem;
+				top: 1rem;
+				right: auto;
+				bottom: auto;
+			}
+		}
+
+		&__text {
+			&-title {
+				@include mobile-heading-3();
+			}
+
+			&-date {
+				font-size: 0.95rem;
+				position: relative;
+			}
+
+			&-desc {
+				@include mobile-body-small();
+			}
+		}
 	}
 
 	.contact {
-		display: none;
+		margin: 0 2rem;
+		margin-top: 7rem;
+
+		display: flex;
+		flex-direction: column;
+
+		&__intro-container {
+			margin: 0;
+		}
+
+		&__title-container {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+
+		&__title {
+			@include mobile-heading-2();
+			width: auto;
+		}
+
+		&__title-bar {
+			font-size: 0.5rem;
+			width: auto;
+		}
+
+		&__email {
+			margin: 0;
+		}
+
+		&__wrapper {
+			margin: 0;
+			padding: 0;
+			background: none;
+		}
+
+		&__form {
+			margin: 0;
+			margin-top: 3rem;
+			padding: 0;
+
+			gap: 1rem;
+
+			&-label {
+				font-size: 1rem;
+				margin-bottom: 0.4em;
+				margin-left: 0.7rem;
+			}
+
+			&-text-input {
+				font-size: 1rem;
+				margin: 0;
+				height: auto;
+				padding: 0.7em 0.8em;
+			}
+
+			textarea {
+				width: 320px;
+				height: 160px;
+				resize: none;
+			}
+		}
+
+		&__submit {
+			font-size: 1rem;
+		}
+	}
+
+	.footer {
+		margin-top: 13.5rem;
+		padding: 0.4em 2rem;
+		font-size: 1rem;
 	}
 }
