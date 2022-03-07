@@ -46,6 +46,10 @@ body {
   font-weight: 700;
 }
 
+.header__lang.mobile-mode {
+  display: none;
+}
+
 .header__button {
   background: none;
   font-family: "IBM Plex Mono", monospace, sans-serif;
@@ -54,8 +58,11 @@ body {
   border: none;
 }
 
-.header__button:focus-within {
-  font-weight: bold;
+.navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .navbar {
@@ -775,7 +782,71 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .header {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mobile-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1rem 0;
+    margin-right: 2rem;
+  }
+  .navbar .mobile-hidden {
     display: none;
+  }
+  .burger {
+    background-color: #00050f;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 78;
+    inset: 0 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1.8rem 2rem;
+  }
+  .burger__ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.2rem;
+  }
+  .burger__li {
+    font-family: "IBM Plex Mono", monospace, sans-serif;
+    font-size: 1.1rem;
+  }
+  .burger-bars {
+    width: 2.2rem;
+  }
+  .burger-bars.is-open {
+    display: none;
+  }
+  .burger-close {
+    width: 1.5rem;
   }
   .intro {
     padding: 0;

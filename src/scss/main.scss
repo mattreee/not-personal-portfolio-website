@@ -161,6 +161,10 @@ body {
 		.lang-selected {
 			font-weight: $fw-ibm-plex-mono-bold;
 		}
+
+		&.mobile-mode {
+			display: none;
+		}
 	}
 
 	&__button {
@@ -169,11 +173,12 @@ body {
 		font-size: 1.25rem;
 		color: white;
 		border: none;
-
-		&:focus-within {
-			font-weight: bold;
-		}
 	}
+}
+
+.navbar-container {
+	display: flex;
+	gap: 1.5rem;
 }
 
 .navbar {
@@ -685,7 +690,67 @@ body {
 
 @media only screen and (max-width: 1000px) {
 	.header {
-		display: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navbar-container {
+		width: 100%;
+		display: flex;
+	}
+
+	.mobile-container {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		margin: 1rem 0;
+		margin-right: 2rem;
+	}
+
+	.navbar {
+		.mobile-hidden {
+			display: none;
+		}
+	}
+
+	.burger {
+		background-color: $color-bg;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		z-index: 78;
+		inset: 0 0 0 0;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		padding: 1.8rem 2rem;
+
+		&__ul {
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+		}
+
+		&__li {
+			font-family: $ff-ibm-plex-mono;
+			font-size: 1.1rem;
+		}
+	}
+
+	.burger-bars {
+		width: 2.2rem;
+
+		&.is-open {
+			display: none;
+		}
+	}
+
+	.burger-close {
+		width: 1.5rem;
 	}
 
 	.intro {
@@ -717,13 +782,6 @@ body {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
-
-		// grid-template-columns: 1fr;
-		// grid-template-areas:
-		// 	"image"
-		// 	"desc"
-		// 	"skills";
-		// row-gap: 2rem;
 
 		&__image-container {
 			margin: 0 auto;
