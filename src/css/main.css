@@ -879,7 +879,7 @@ body {
   }
   .intro {
     padding: 0;
-    height: 100vh;
+    height: 78vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -903,6 +903,21 @@ body {
     padding: 0 2rem;
     width: auto;
     font-size: 1rem;
+  }
+  .back-to-top {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin: 2rem auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+  .back-to-top .button-container:nth-child(1) {
+    display: none;
   }
   .about {
     margin: 0 2.5rem;

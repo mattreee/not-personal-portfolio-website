@@ -16,8 +16,8 @@ function App() {
 			<Header>
 				<Navbar />
 			</Header>
-			<BackToTop />
 			<Intro />
+			<BackToTop />
 			<About />
 			<Services />
 			<Projects />
