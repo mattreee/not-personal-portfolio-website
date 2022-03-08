@@ -41,7 +41,14 @@ const Navbar = () => {
 				<li className="burger__li">projects</li>
 				<li className="burger__li">experience</li>
 			</ul>
-			<div className="burger__lang-buttons"></div>
+			<div className="burger__lang-buttons">
+				<button className="burger__lang-button" id="pt">
+					pt
+				</button>
+				<button className="burger__lang-button lang-selected" id="en">
+					en
+				</button>
+			</div>
 		</div>
 	);
 

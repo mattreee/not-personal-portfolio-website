@@ -868,6 +868,17 @@ body {
     font-family: "IBM Plex Mono", monospace, sans-serif;
     font-size: 1.1rem;
   }
+  .burger__lang-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace, sans-serif;
+  }
+  .burger__lang-button.lang-selected {
+    margin-left: 1rem;
+    font-weight: bold;
+  }
   .burger-bars {
     width: 2.2rem;
   }
@@ -1138,6 +1149,22 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 0.4rem;
+    margin-left: -2rem;
+    padding-left: 2rem;
+    margin-top: -2rem;
+    padding-bottom: 2rem;
+    border-left: 2px solid #00faa0;
+    position: relative;
+  }
+  .experience__timeline-item::before {
+    position: absolute;
+    content: "\2022";
+    color: #00faa0;
+    font-size: 2rem;
+    left: -0.23em;
+    top: -0.1em;
+    width: 30px;
+    height: 20px;
   }
   .experience__date {
     font-family: "IBM Plex Sans", monospace, sans-serif;
@@ -1145,24 +1172,10 @@ body {
     font-weight: bold;
   }
   .experience__date::before {
-    position: absolute;
-    content: "\2022";
-    font-size: 2rem;
-    left: -2.5rem;
-    top: -0.7rem;
-    right: auto;
-    color: #00faa0;
+    display: none;
   }
   .experience__date::after {
-    position: absolute;
-    content: "";
-    background-color: #00faa0;
-    width: 1px;
-    height: clamp(42vh, 10vh, 250px);
-    left: -2.1rem;
-    top: 1rem;
-    right: auto;
-    bottom: auto;
+    display: none;
   }
   .experience__text-title {
     font-family: "IBM Plex Mono", monospace, sans-serif;

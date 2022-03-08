@@ -765,6 +765,20 @@ body {
 			font-family: $ff-ibm-plex-mono;
 			font-size: 1.1rem;
 		}
+
+		&__lang-button {
+			background: none;
+			border: none;
+			color: white;
+
+			font-size: 1rem;
+			font-family: $ff-ibm-plex-mono;
+
+			&.lang-selected {
+				margin-left: 1rem;
+				font-weight: bold;
+			}
+		}
 	}
 
 	.burger-bars {
@@ -1017,6 +1031,26 @@ body {
 			display: flex;
 			flex-direction: column;
 			gap: 0.4rem;
+
+			margin-left: -2rem;
+			padding-left: 2rem;
+
+			margin-top: -2rem;
+			padding-bottom: 2rem;
+
+			border-left: 2px solid $color-secondary;
+			position: relative;
+
+			&::before {
+				position: absolute;
+				content: "\2022";
+				color: $color-secondary;
+				font-size: 2rem;
+				left: -0.23em;
+				top: -0.1em;
+				width: 30px;
+				height: 20px;
+			}
 		}
 
 		&__date {
@@ -1025,26 +1059,28 @@ body {
 			font-weight: bold;
 
 			&::before {
-				position: absolute;
-				content: "\2022";
-				font-size: 2rem;
-				left: -2.5rem;
-				top: -0.7rem;
-				right: auto;
+				display: none;
+				// position: absolute;
+				// content: "\2022";
+				// font-size: 2rem;
+				// left: -2.5rem;
+				// top: -0.7rem;
+				// right: auto;
 
-				color: $color-secondary;
+				// color: $color-secondary;
 			}
 
 			&::after {
-				position: absolute;
-				content: "";
-				background-color: $color-secondary;
-				width: 1px;
-				height: clamp(42vh, 10vh, 250px);
-				left: -2.1rem;
-				top: 1rem;
-				right: auto;
-				bottom: auto;
+				display: none;
+				// position: absolute;
+				// content: "";
+				// background-color: $color-secondary;
+				// width: 1px;
+				// height: clamp(42vh, 10vh, 250px);
+				// left: -2.1rem;
+				// top: 1rem;
+				// right: auto;
+				// bottom: auto;
 			}
 		}
 
