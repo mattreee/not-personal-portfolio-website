@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 const Header = ({ children }: any) => {
 	const [mobileMode, setMobileMode] = useState(false);
 
+	console.log(children);
+
 	const toggleLangSelect = (e: any) => {
 		const pt = document.querySelector("#pt");
 		const en = document.querySelector("#en");

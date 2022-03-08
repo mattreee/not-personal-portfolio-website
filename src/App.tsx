@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import BackToTop from "./components/BackToTop";
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import About from "./components/About";
@@ -15,6 +16,7 @@ function App() {
 			<Header>
 				<Navbar />
 			</Header>
+			<BackToTop />
 			<Intro />
 			<About />
 			<Services />

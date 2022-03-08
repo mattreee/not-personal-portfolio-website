@@ -136,6 +136,7 @@ $color-error: #dc0000;
 body {
 	background-color: $color-bg;
 	color: white;
+	overflow-x: hidden;
 }
 
 .bold-text {
@@ -211,6 +212,29 @@ body {
 	}
 }
 
+.back-to-top {
+	// background-color: red;
+	width: fit-content;
+	padding: 0 0.5rem;
+	position: fixed;
+	right: 15em;
+	bottom: 1em;
+
+	.button-container {
+		display: grid;
+		place-items: center;
+		margin-top: 0.5rem;
+
+		cursor: pointer;
+	}
+
+	.seta {
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 1rem;
+	}
+}
+
 .intro {
 	padding: 9rem 0;
 	overflow-x: hidden;
@@ -252,8 +276,6 @@ body {
 	column-gap: 0.5rem;
 	row-gap: 1.5rem;
 
-	// font-size: 2.5vmin;
-
 	&__desc {
 		grid-area: desc;
 	}
@@ -261,6 +283,7 @@ body {
 	&__image-container {
 		position: relative;
 		align-self: start;
+		width: fit-content;
 
 		&::before {
 			position: absolute;
@@ -657,6 +680,8 @@ body {
 		textarea {
 			width: 368px;
 			height: 184px;
+
+			resize: none;
 		}
 	}
 
@@ -672,12 +697,13 @@ body {
 }
 
 .footer {
-	margin-top: 7rem;
 	background-color: $color-neutral-primary-15;
 	color: $color-neutral-primary-60;
 	display: flex;
 	justify-content: center;
 	font-family: $ff-ibm-plex-mono-sans;
+
+	margin-top: 5rem;
 
 	&__text {
 		margin: 0 auto;
@@ -1025,10 +1051,12 @@ body {
 
 	.contact {
 		margin: 0 2rem;
-		margin-top: 7rem;
+		margin-top: 8rem;
 
 		display: flex;
 		flex-direction: column;
+
+		height: fit-content;
 
 		&__intro-container {
 			margin: 0;
@@ -1092,7 +1120,8 @@ body {
 	}
 
 	.footer {
-		margin-top: 13.5rem;
+		margin: 0;
+		margin-top: 5rem;
 		padding: 0.4em 2rem;
 		font-size: 1rem;
 	}

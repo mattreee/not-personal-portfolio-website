@@ -2,7 +2,7 @@ const Experience = () => {
 	return (
 		<section className="experience" id="experience">
 			<div className="experience__title-container">
-				<h2 className="experience__title">Experience</h2>
+				<h2 className="experience__title">experience</h2>
 				<div className="experience__title-bar">a</div>
 			</div>
 			<div className="experience__timeline-container">
