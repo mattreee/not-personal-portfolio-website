@@ -3,15 +3,16 @@ import { useState, useEffect } from "react";
 const Header = ({ children }: any) => {
 	const [mobileMode, setMobileMode] = useState(false);
 
-	console.log(children);
-
-	const toggleLangSelect = (e: any) => {
+	const toggleLangSelect = (e: Event) => {
 		const pt = document.querySelector("#pt");
 		const en = document.querySelector("#en");
 
-		if (e.target === pt || e.target === en) {
-			pt?.classList.toggle("lang-selected");
-			en?.classList.toggle("lang-selected");
+		if (e.target === pt) {
+			pt?.classList.add("lang-selected");
+			en?.classList.remove("lang-selected");
+		} else if (e.target === en) {
+			en?.classList.add("lang-selected");
+			pt?.classList.remove("lang-selected");
 		}
 	};
 
